@@ -1,6 +1,6 @@
 import React from "react";
 import NavButtons from "../components/navButtons/navButtons";
-import Subreddits from "../subreddits/subreddits";
+import SubredditsMenu from "../subredditsMenu/subredditsMenu";
 /*
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -12,7 +12,7 @@ export default function Root() {
         <>
             {/*<Header/>*/}
             <NavButtons />
-            <Subreddits />
+            <SubredditsMenu />
             <main>
                 <Outlet/>
             </main>

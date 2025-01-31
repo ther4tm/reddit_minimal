@@ -6,6 +6,10 @@ export default function NavButtons() {
 
   const navigate = useNavigate();
 
+  const goHome = () => {
+    navigate('/') //sends the user back to the root
+  }
+
   const goBack = () => {
     navigate(-1)
   }
@@ -16,6 +20,7 @@ export default function NavButtons() {
 
   return (
     <div className={style.navButtons}>
+      <button onClick={goHome}>Home</button>
       <button onClick={goBack}>Back</button>
       <button onClick={goForward}>Forward</button>
     </div>

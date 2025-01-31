@@ -8,6 +8,7 @@ import posts from "../../fakeDataForTesting/FakePosts";
 export default function Subreddit() {
     return (
         <div className={style.subredditContainer}>
+            <h1>r/{posts.data.children[0].data.subreddit}</h1>
                 {Object.keys(posts.data.children).map((e) => {
                 return (
                 <Post
@@ -20,12 +21,10 @@ export default function Subreddit() {
                 downVotes={posts.data.children[e].data.downs}
                 comments={posts.data.children[e].data.num_comments}
                 />
-                        );
-                }
+                            );
+                        }
                     )
                 }
         </div>
     )
 };
-
-//make a comments component

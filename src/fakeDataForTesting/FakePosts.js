@@ -60,6 +60,7 @@ const posts = {
             0: {
                 kind: 't3',
                 data: {
+                    subreddit: 'magicTCG',
                     title: 'I took my son to the national museum.', //post title
                     selftext: 'I thought you\'d like to see them too', //post text
                     permalink: 'r/Subreddit-01/I_took_my_son', //links to the post but can also be used to get the comments on the post
@@ -81,6 +82,7 @@ const posts = {
             1: {
                 kind: 't3',
                 data: {
+                    subreddit: 'magicTCG',
                     title: 'Mark Rosewater said this...', //post title
                     selftext: 'At MagiCon Mark Rosewater came out with this statement', //post text
                     permalink: 'r/Subreddit-01/Mark_rosewater', //links to the post but can also be used to get the comments on the post
@@ -102,6 +104,7 @@ const posts = {
             2: {
                 kind: 't3',
                 data: {
+                    subreddit: 'magicTCG',
                     title: 'Foundations', //post title
                     selftext: 'Some of the new cards being released in Foundations', //post text
                     permalink: 'r/Subreddit-01/foundations', //links to the post but can also be used to get the comments on the post
@@ -123,6 +126,7 @@ const posts = {
             3: {
                 kind: 't3',
                 data: {
+                    subreddit: 'magicTCG',
                     title: 'Arena Questions', //post title
                     selftext: 'Post your daily questions about MTG Arena here.', //post text
                     permalink: 'r/Subreddit-01/arena_questions', //links to the post but can also be used to get the comments on the post
