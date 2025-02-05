@@ -1,6 +1,6 @@
 import React from "react";
-import NavButtons from "../components/navButtons/navButtons";
-import SubredditsMenu from "../components/subredditsMenu/subredditsMenu";
+import NavButtons from "../navButtons/navButtons";
+import SubredditsMenu from "../subredditsMenu/subredditsMenu";
 /*
 import Header from "../components/Header";
 import Footer from "../components/Footer";

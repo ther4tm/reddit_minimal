@@ -1,5 +1,5 @@
 import './App.css';
-import Root from '../root/Root';
+import Root from '../components/root/Root';
 import Subreddit from '../components/subreddit/subreddit';
 import Post from '../components/post/post';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
