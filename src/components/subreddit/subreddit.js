@@ -1,28 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from './subreddit.module.css';
-import Post from "../post/post";
-
-//fake data for testing
-import posts from "../../fakeDataForTesting/FakePosts";
+import { useDispatch, useSelector } from "react-redux";
+import { selectSubreddits, isLoadingSubreddits, loadDefaultSubreddit } from "./subredditSlice";
+import PostPreview from "../postPreview/postPreview";
 
 export default function Subreddit() {
+    const dispatch = useDispatch();
+    const subreddit = useSelector(selectSubreddits);
+    const isLoading = useSelector(isLoadingSubreddits);
+
+    useEffect(() => {
+        dispatch(loadDefaultSubreddit());
+    }, []);
+
+    if (isLoading) {
+        return (
+            <div className={style.subredditContainer}>
+                <h1>Loading...</h1>
+            </div>
+        )
+    }
+
     return (
         <div className={style.subredditContainer}>
-            <h1>r/{posts.data.children[0].data.subreddit}</h1>
-                {Object.keys(posts.data.children).map((e) => {
-                return (
-                <Post
-                key={posts.data.children[e].data.id}
-                link={posts.data.children[e].data.permalink}
-                postTitle={posts.data.children[e].data.title}
-                author={posts.data.children[e].data.author}
-                media={posts.data.children[e].data.media_metadata[0].s.u}
-                upVotes={posts.data.children[e].data.ups}
-                downVotes={posts.data.children[e].data.downs}
-                comments={posts.data.children[e].data.num_comments}
+            <h1>{subreddit.subreddit_name_prefixed}</h1>
+                {subreddit.map((post, index) => (
+                <PostPreview
+                key={subreddit[index].id}
+                link={subreddit[index].permalink}
+                postTitle={subreddit[index].title}
+                author={subreddit[index].author}
+                upVotes={subreddit[index].ups}
+                downVotes={subreddit[index].downs}
+                comments={subreddit[index].num_comments}
                 />
-                            );
-                        }
+                        )
                     )
                 }
         </div>

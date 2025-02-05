@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import style from './subredditsMenu.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectSubredditsMenu, isLoadingSubredditsMenu, loadSubredditsMenu } from "./subredditsMenuSlice";
+import { loadSelectedSubreddit } from "../subreddit/subredditSlice";
 
 export default function SubredditsMenu() {
     const dispatch = useDispatch();
@@ -11,7 +12,7 @@ export default function SubredditsMenu() {
 
     useEffect(() => {
         dispatch(loadSubredditsMenu());
-    }, [dispatch]);
+    }, []);
 
     if (isLoading) {
         return (
@@ -28,7 +29,8 @@ export default function SubredditsMenu() {
             <ul>
                 {subreddits.map((subreddit, index) => (
                 <li key={subreddits[index].id}>
-                    <NavLink to={`${subreddits[index].display_name_prefixed}`}>
+                    <NavLink to={`${subreddits[index].display_name_prefixed}`}
+                    onClick={(e) => dispatch(loadSelectedSubreddit(subreddits[index].display_name_prefixed))}>
                     {subreddits[index].title}
                     </NavLink>
                 </li>
