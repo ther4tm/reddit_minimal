@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loadPostAndComments } from "../post/postSlice";
 
-export default function PostPreview({ post }) {
+export default function IndexPostPreview({ post }) {
     const dispatch = useDispatch();
 
     const onClickPostLink = (e) => {
@@ -13,7 +13,7 @@ export default function PostPreview({ post }) {
 
     return (
         <div className={style.postContainer}>
-            <Link to={`${post.id}`}
+            <Link to={`${post.subreddit_name_prefixed}/${post.id}`}
             onClick={() => onClickPostLink(post.permalink)}
             >
                 <h2>{post.title}</h2>
