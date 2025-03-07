@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import style from './subreddit.module.css';
-import { useDispatch, useSelector } from "react-redux";
-import { selectSubredditPosts, isLoadingSubredditPosts, failedToLoadSubredditPosts, loadSubreddit, getSelectedSubreddit } from "./subredditSlice";
+import { useSelector } from "react-redux";
+import { selectSubredditPosts, isLoadingSubredditPosts, failedToLoadSubredditPosts, getSelectedSubreddit } from "./subredditSlice";
 import PostPreview from "../postPreview/postPreview";
 
 export default function Subreddit() {
-    const dispatch = useDispatch();
     const subredditPosts = useSelector(selectSubredditPosts);
     const isLoading = useSelector(isLoadingSubredditPosts);
     const hasError = useSelector(failedToLoadSubredditPosts);

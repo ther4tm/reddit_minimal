@@ -15,33 +15,35 @@ const postSlice = createSlice({
     initialState: {
         post: [],
         comments: [],
-        isLoadingPost: false,
-        failedToLoadPost: false,
+        isLoadingPostAndComments: false,
+        failedToLoadPostAndComments: false,
     },
     reducers: {},
     extraReducers: (builder) => {
         builder
         .addCase(loadPostAndComments.pending, (state) => {
-            state.isLoadingPost = true;
-            state.failedToLoadPost = false;
+            state.isLoadingPostAndComments = true;
+            state.failedToLoadPostAndComments = false;
         })
         .addCase(loadPostAndComments.fulfilled, (state, action) => {
             const responseData = action.payload;
             state.post = responseData[0].data.children[0].data;
             state.comments = responseData[1].data.children.map(child => child.data);
-            state.isLoadingPost = false;
-            state.failedToLoadPost = false;
+            state.isLoadingPostAndComments = false;
+            state.failedToLoadPostAndComments = false;
         })
         .addCase(loadPostAndComments.rejected, (state) => {
-            state.isLoadingPost = false;
-            state.failedToLoadPost = true;
+            state.isLoadingPostAndComments = false;
+            state.failedToLoadPostAndComments = true;
             state.post = [];
         })
     }
 });
 
 export const selectPost = (state) => state.post.post;
-export const isLoadingPost = (state) => state.post.isLoadingPost;
+export const isLoadingPostAndComments = (state) => state.post.isLoadingPostAndComments;
+export const failedToLoadPostAndComments = (state) => state.post.failedToLoadPostAndComments;
 export const selectPostId = (state) => state.post.post.id;
+export const selectComments = (state) => state.post.comments;
 
 export default postSlice.reducer;
