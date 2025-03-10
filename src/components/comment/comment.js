@@ -1,5 +1,6 @@
 import React from "react";
 import style from './comment.module.css';
+import  { removeOuterDiv } from '../../Utilities/utilities.js';
 
 export default function Comment({comment}) {
 
@@ -29,14 +30,21 @@ export default function Comment({comment}) {
         return replyRenderer;
     }
 
+    function setCommentBody(comment) {
+        const text = comment.body_html || null;
+        if (text) {
+            return <div dangerouslySetInnerHTML={{__html: removeOuterDiv(comment.body_html)}} />
+        }
+    }
+
     return (
         <div className={style.commentContainer}>
             <p>Author: {comment.author}</p>
-            <p>Comment: {comment.body}</p>
-            <p>Replies: </p>
+            <div>
+                {setCommentBody(comment)}
+            </div>
             <div className="replies">
                 {nestedComments(comment)}
-
             </div>
         </div>
     )

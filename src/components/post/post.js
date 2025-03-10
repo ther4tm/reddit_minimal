@@ -3,6 +3,7 @@ import style from './post.module.css';
 import Comment from "../comment/comment";
 import { useSelector } from "react-redux";
 import { selectPost, isLoadingPostAndComments, failedToLoadPostAndComments, selectComments } from "./postSlice";
+import { PostBody } from "./postBody";
 
 export default function Post() {
     const post = useSelector(selectPost);
@@ -14,6 +15,7 @@ export default function Post() {
     const date = utcDate;*/
 
     const displayPostAndComments = () => {
+
         if (isLoading) {
             return (
                         <p>Loading...</p>
@@ -29,7 +31,7 @@ export default function Post() {
                 <h3>{post.author}</h3>
                 <h4>Date posted: {post.created_utc}</h4>
                 <p>PHOTOS AND MEDIA HERE</p>
-                <p>{post.selftext}</p>
+                <PostBody post={post}/>
                 <p>UpVotes: {post.ups}</p>
                 <p>DownVotes: {post.downs}</p>
                 <p>Comments: {post.num_comments}</p>
