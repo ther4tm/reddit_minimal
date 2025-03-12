@@ -1,6 +1,6 @@
-import { removeOuterDiv } from "../../Utilities/utilities";
+import { removeOuterDiv } from "../../../Utilities/utilities";
 
-export function PostBody({post}) {
+export function Text({post}) {
     const text = post.selftext_html || null;
     if (text) {
         return <div dangerouslySetInnerHTML={{__html: removeOuterDiv(text)}} />
