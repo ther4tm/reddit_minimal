@@ -1,22 +1,41 @@
-import React from "react";
-import NavButtons from "../navButtons/navButtons";
+import React, { useState } from "react";
 import SubredditsMenu from "../subredditsMenu/subredditsMenu";
-/*
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-*/
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import SearchBar from '../search/searchBar';
+import { useSelector, useDispatch } from "react-redux";
+import { loadSearchResults } from "../search/searchSlice";
 
 export default function Root() {
+    const [search, setSearch] = useState(''); // User Search
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+  
+    const handleChange = ({target}) => {
+        setSearch(target.value);
+    }
+
+    const handleSearch = (event) => {
+        event.preventDefault();
+        if (!search) {
+          return;
+        }
+        navigate('search_results');
+        dispatch(loadSearchResults(search));
+        //still need to create the redirect to the search result component
+    }
+
     return (
         <>
-            {/*<Header/>*/}
-            {/*<NavButtons />*/}
             <SubredditsMenu />
+            <SearchBar
+            value={search}
+            onChange={handleChange}
+            onClick={handleSearch}
+            />
+            <p>{search}</p>
             <main>
                 <Outlet/>
             </main>
-            {/*<Footer/>*/}
         </>
     )
 }

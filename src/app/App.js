@@ -4,10 +4,12 @@ import Subreddit from '../components/subreddit/subreddit';
 import Post from '../components/post/post';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import IndexSubreddit from '../components/indexSubreddit/indexSubreddit';
+import SearchResults from '../components/search/searchResults';
 
 const router =  createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={ <Root/> }>
     <Route index element={ <IndexSubreddit /> } />
+    <Route path='search_results' element={ <SearchResults /> } />
     <Route path='r/:subreddit' element={ <Subreddit />} />
     <Route path='r/:subreddit/:post' element={ <Post /> } />
   </Route>

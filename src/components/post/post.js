@@ -6,6 +6,7 @@ import { selectPost, isLoadingPostAndComments, failedToLoadPostAndComments, sele
 import { Text } from "./postElements/textElement";
 import { Image } from "./postElements/imageElement";
 import { Video } from "./postElements/videoElement";
+import { GalleryFeed } from "./postElements/galleryFeed";
 import { calculatePostDate } from "../../Utilities/utilities";
 
 export default function Post() {
@@ -30,6 +31,7 @@ export default function Post() {
                 <>
                 <h2>{post.title}</h2>
                 <h3>{post.author}</h3>
+                <GalleryFeed post={post}/>
                 <Video post={post}/>
                 <Image post={post}/>
                 <Text post={post}/>
