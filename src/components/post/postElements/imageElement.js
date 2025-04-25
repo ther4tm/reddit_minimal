@@ -1,3 +1,5 @@
+import style from './imageElement.module.css';
+
 export function Image({post}) {
     const url = post.url;
 
@@ -8,7 +10,7 @@ export function Image({post}) {
 
     if (checkURLIsImg(url)) {
         return (
-            <div>
+            <div className={style.imageContainer}>
                 <img src={url} alt={url}/>
             </div>
         )

@@ -1,7 +1,8 @@
 import { useState } from "react";
+import style from './galleryElement.module.css';
 
 export function ImageGallery({keys, images}) {
-    const imageURLs = keys.map(key => images[key].s.u.split('?')[0].replace('preview', 'i'));
+    const imageURLs = keys.map(key => images[key].s?.u?.split('?')[0].replace('preview', 'i'));
     const [currentImage, setCurrentImage] = useState(0);
 
     const previousImg = () => {
@@ -21,11 +22,10 @@ export function ImageGallery({keys, images}) {
     }
 
     return (
-        <div className="imageGallery">
+        <div className={style.galleryContainer}>
+            <button className={style.leftArrow} onClick={() => previousImg()}>&#11207;</button>
+            <button className={style.rightArrow} onClick={() => nextImg()}>&#11208;</button>
             <img src={imageURLs[currentImage]} alt={imageURLs} />
-            <p>{imageURLs[currentImage]}</p>
-            <button id='leftArrow' onClick={() => previousImg()}>&lt;</button>
-            <button id='rightArrow' onClick={() => nextImg()}>&gt;</button>
         </div>
     )
 };

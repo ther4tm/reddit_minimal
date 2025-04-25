@@ -10,6 +10,14 @@ export default function SubredditsMenu() {
     const subreddit = useSelector(state => state.subredditsMenu);
     const { subreddits, isLoadingSubredditsMenu, failedToLoadSubredditsMenu } = subreddit;
 
+    const minimiseMenu = (event) => {
+        event.target.style.display = 'none';
+    }
+
+    const maximiseMenu = (event) => {
+        event.target.style.display = 'block';
+    }
+
     useEffect(() => {
         dispatch(loadSubredditsMenu());
     }, []);
@@ -34,7 +42,7 @@ export default function SubredditsMenu() {
                     <li key={subreddits[index].id}>
                         <NavLink to={`${subreddits[index].display_name_prefixed}`}
                         onClick={() => onClickMenuLink(subreddits[index].display_name_prefixed)}>
-                        {subreddits[index].title}
+                        {subreddits[index].display_name_prefixed}
                         </NavLink>
                     </li>
                             )
@@ -46,7 +54,9 @@ export default function SubredditsMenu() {
     }
 
     return (
-        <div className={style.container}>
+        <div className={style.subredditMenuContainer}>
+            <p id="closeMenu" className={style.closeMenu} onClick={() => {minimiseMenu()}} >&lt;&lt; close</p>
+            <p id="openMenu" className={style.openMenu} onClick={() => {maximiseMenu()}}>open &gt;&gt;</p>
             {displaySubredditMenu()}
         </div>
     )

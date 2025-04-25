@@ -1,0 +1,19 @@
+.rootContainer {
+    display: inline-flex;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.menuContainer {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 17%;
+    padding-right: 0.5rem;
+}
+
+.outletContainer {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 83%;
+    padding-left: 0.5rem;
+}

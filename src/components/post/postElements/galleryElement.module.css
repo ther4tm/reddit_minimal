@@ -1,0 +1,42 @@
+.galleryContainer {
+    height: 30rem;
+    position: relative;
+}
+
+.galleryContainer .leftArrow {
+    height: 3rem;
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    left: 0;
+}
+
+.galleryContainer .rightArrow {
+    height: 3rem;
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    right: 0;
+}
+
+.galleryContainer img {
+    height: 30rem;
+}
+
+.galleryContainer button {
+    border-top: solid 5px #ffffff;
+border-left: solid 5px #ffffff;
+border-bottom: solid 5px #000000;
+border-right: solid 5px #000000;
+&:hover {
+    cursor: pointer;
+    background-color: rgba(255, 69, 0, 0.2);
+}
+&:active {
+    border-top: solid 5px #000000;
+    border-left: solid 5px #000000;
+    border-bottom: solid 5px #ffffff;
+    border-right: solid 5px #ffffff;
+    background-color: rgb(255, 69, 0);
+}
+}

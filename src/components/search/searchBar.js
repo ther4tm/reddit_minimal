@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loadSearchResults } from "./searchSlice";
 import { useDispatch } from "react-redux";
+import style from './searchBar.module.css';
 
 export default function SearchBar() {
         const [search, setSearch] = useState(''); // User Search
@@ -20,25 +21,28 @@ export default function SearchBar() {
             navigate('search_results');
             dispatch(loadSearchResults(search));
             setSearch('');
-            //still need to create the redirect to the search result component
         }
 
     return (
-        <div className='search'>
-            <form className='form'>
+        <div className={style.searchBarContainer}>
+            <div className={style.logoContainer}>
+                <img src={require('./reddit_logo_pixel_art_2.png')} alt='reddit logo' />
+                <h1>reddit minimal</h1>
+            </div>
+            <form>
                 <input
-                className='search_input'
                 type="text"
-                placeholder="Search..."
+                placeholder="SEARCH SUBREDDITS..."
                 value={search}
                 onChange={handleChange}
                 />
 
                 <button
-                className='button'
                 onClick={handleSearch}
-                >Submit</button>
+                >SEARCH</button>
             </form>
         </div>
     )
 };
+
+//the require method in the img allows local images to load in dev

@@ -39,8 +39,10 @@ export default function Comment({comment}) {
 
     return (
         <div className={style.commentContainer}>
-            <p>Author: {comment.author}</p>
-            <div>
+            <div className={style.commentHeader}>
+                <h3>Author: {comment.author}</h3>
+            </div>
+            <div className={style.commentMain}>
                 {setCommentBody(comment)}
             </div>
             <div className="replies">

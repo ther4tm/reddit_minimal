@@ -1,0 +1,8 @@
+.videoContainer {
+    max-width: 100%;
+}
+
+.videoContainer video {
+    height: 30rem;
+    width: 100%;
+}

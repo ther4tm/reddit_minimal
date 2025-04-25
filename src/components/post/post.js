@@ -28,34 +28,41 @@ export default function Post() {
             )
         } else if (comments.length > 0) {
             return (
-                <>
-                <h2>{post.title}</h2>
-                <h3>{post.author}</h3>
-                <GalleryFeed post={post}/>
-                <Video post={post}/>
-                <Image post={post}/>
-                <Text post={post}/>
-                <h4>Posted {calculatePostDate(date)}</h4>
-                <p>UpVotes: {post.ups}</p>
-                <p>DownVotes: {post.downs}</p>
-                <p>Comments: {post.num_comments}</p>
-                    <div>
-                    {comments.map((comment, index) => (
-                    <Comment
-                    key={index}
-                    comment={comment}
-                    />
-                            )
-                        )
-                    }
+                <div className={style.postContainer}>
+                    <div className={style.postHeader}>
+                        <h2>{post.title}</h2>
                     </div>
-                </>
+                    <div className={style.postMenuBar}>
+                        <p>&#129153; {post.ups}</p>
+                        <p>&#129155; {post.downs}</p>
+                        <p>&#128490; {post.num_comments}</p>
+                    </div>
+                    <div className={style.postMain}>
+                        <h3>Posted by {post.author} {calculatePostDate(date)}</h3>
+                        <GalleryFeed post={post}/>
+                        <Video post={post}/>
+                        <Image post={post}/>
+                        <Text post={post}/>
+                    </div>
+                    <div className={style.postCommentsContainer}>
+                        <div className={style.postComments}>
+                            {comments.map((comment, index) => (
+                            <Comment
+                            key={index}
+                            comment={comment}
+                            />
+                                    )
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
             )
         }
     }
 
     return (
-        <div className={style.postContainer}>
+        <div className={style.postOverallContainer}>
             {displayPostAndComments()}
         </div>
     )

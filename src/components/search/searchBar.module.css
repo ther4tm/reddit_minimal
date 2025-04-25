@@ -1,0 +1,79 @@
+.searchBarContainer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: dashed 5px #000;
+    display: inline-flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+}
+
+.searchBarContainer form {
+    align-content: center;
+    width: 50%;
+}
+
+.logoContainer {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+}
+
+.logoContainer img {
+    width: 4rem;
+    padding-right: 1rem;
+}
+
+.searchBarContainer h1 {
+    text-align: end;
+    padding-right: 2rem;
+}
+
+.searchBarContainer form {
+    margin-left: 2rem;
+}
+
+.searchBarContainer input {
+    min-height: 2rem;
+    border-top: solid 5px #000;
+    border-left: solid 5px #000;
+    border-bottom: solid 5px #ffffff;
+    border-right: solid 5px #ffffff;
+    padding-left: 0.5rem;
+    font-family: 'Jersey 25';
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 1);
+    width: 50%;
+    &:focus {
+        outline: 0;
+        background-color: rgba(255, 69, 0, 0.2);
+    }
+    &:focus::placeholder { /* Clears the placeholder text when the input is focused */
+        color: transparent;
+    }
+}
+
+.searchBarContainer button {
+    margin-left: .5rem;
+    min-height: 2rem;
+    padding: .1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'Jersey 25';
+    font-size: 1.5rem;
+    border-top: solid 5px #ffffff;
+    border-left: solid 5px #ffffff;
+    border-bottom: solid 5px #000000;
+    border-right: solid 5px #000000;
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        border-top: solid 5px #000000;
+        border-left: solid 5px #000000;
+        border-bottom: solid 5px #ffffff;
+        border-right: solid 5px #ffffff;
+        background-color: rgb(255, 69, 0);
+    }
+}

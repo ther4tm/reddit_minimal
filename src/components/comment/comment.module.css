@@ -1,4 +1,29 @@
 .commentContainer {
-    border: solid 1px #000;
-    margin: 1rem;
+    border-top: solid 5px #ffffff;
+    border-left: solid 5px #ffffff;
+    border-bottom: solid 5px #000000;
+    border-right: solid 5px #000000;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 0.5%;
+}
+
+.commentHeader {
+    background-color: rgb(184, 184, 184);
+    box-sizing: border-box;
+    border-bottom: solid 5px #000;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.commentHeader h3 {
+    background-color: rgb(184, 184, 184);
+}
+
+.commentMain {
+    padding: 1%;
 }

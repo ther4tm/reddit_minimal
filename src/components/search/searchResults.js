@@ -36,6 +36,7 @@ export default function SearchResults() {
 
     return (
         <div className={style.searchResultsContainer}>
+            <h1>Search Results</h1>
             {displaySearchResultsPreviews()}
         </div>
     )

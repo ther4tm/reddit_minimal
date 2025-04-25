@@ -1,0 +1,8 @@
+.imageContainer {
+    max-width: 100%;
+}
+
+.imageContainer img {
+    height: 30rem;
+    width: 100%;
+}

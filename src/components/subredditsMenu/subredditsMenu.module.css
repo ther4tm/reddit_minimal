@@ -1,4 +1,53 @@
-.container {
-    margin: 1rem;
-    border: solid 1px #000;
+.subredditMenuContainer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    border: dashed 5px #000;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.subredditMenuContainer ul {
+    display: block;
+    overflow: hidden;
+    padding-left: 2.5rem;
+}
+
+.subredditMenuContainer li {
+    list-style-type: "\1F7AC";
+    color: black;
+    white-space: nowrap;
+    &:hover {
+        color: rgb(255, 69, 0);
+    }
+}
+
+.subredditMenuContainer a {
+    text-decoration: none;
+    color: black;
+    padding-left: 1rem;
+    &:hover {
+        color: rgb(255, 69, 0);
+    }
+}
+
+.subredditMenuContainer p {
+    text-align: end;
+}
+
+.openMenu {
+    display: none;
+    &:hover {
+        color: rgb(255, 69, 0);
+        cursor: pointer;
+    }
+}
+
+.closeMenu {
+    display: block;
+    &:hover {
+        color: rgb(255, 69, 0);
+        cursor: pointer;
+    }
 }

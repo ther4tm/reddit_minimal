@@ -1,0 +1,10 @@
+.externalLinkContainer {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.externalLinkContainer img {
+    width: 100%;
+}
