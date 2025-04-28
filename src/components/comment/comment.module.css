@@ -15,9 +15,11 @@
     background-color: rgb(184, 184, 184);
     box-sizing: border-box;
     border-bottom: solid 5px #000;
-
+    padding-left: 0.5%;
     white-space: nowrap;
     overflow: hidden;
+    margin-left: -0.5%; /* This extends the background and border past the padding values of the parent container to cover the entire thing and not stop short */
+    margin-right: -0.5%; /* This extends the background and border past the padding values of the parent container to cover the entire thing and not stop short */
 }
 
 .commentHeader h3 {
@@ -26,4 +28,29 @@
 
 .commentMain {
     padding: 1%;
+}
+
+.commentMain ul {
+    padding-left: 1.5rem;
+}
+
+.commentMain ol {
+    padding-left: 1.5rem;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        color: rgb(255, 69, 0);
+    }
+    50% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+.commentMain a {
+    text-decoration: none;
+    color: rgb(255, 69, 0);
+    &:hover {
+        animation: pulse 2s infinite;
+    }
 }

@@ -1,3 +1,7 @@
 .textElementContainer ul {
     padding-left: 1.5rem;
 }
+
+.textElementContainer ol {
+    padding-left: 1.5rem;
+}

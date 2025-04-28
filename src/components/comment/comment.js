@@ -39,14 +39,16 @@ export default function Comment({comment}) {
 
     return (
         <div className={style.commentContainer}>
-            <div className={style.commentHeader}>
-                <h3>Author: {comment.author}</h3>
-            </div>
-            <div className={style.commentMain}>
-                {setCommentBody(comment)}
-            </div>
-            <div className="replies">
-                {nestedComments(comment)}
+            <div>
+                <div className={style.commentHeader}>
+                    <h3>Author: {comment.author}</h3>
+                </div>
+                <div className={style.commentMain}>
+                    {setCommentBody(comment)}
+                </div>
+                <div className="replies">
+                    {nestedComments(comment)}
+                </div>
             </div>
         </div>
     )
