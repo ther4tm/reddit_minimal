@@ -4,16 +4,34 @@
     width: 100%;
 }
 
-.menuContainer {
+/* Menu open styling */
+
+.menuContainerOpen {
     display: inline-block;
     box-sizing: border-box;
     width: 17%;
     padding-right: 0.5rem;
 }
 
-.outletContainer {
+.outletContainerOpen {
     display: inline-block;
     box-sizing: border-box;
     width: 83%;
+    padding-left: 0.5rem;
+}
+
+/* Menu closed styling */
+
+.menuContainerClosed {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 7%;
+    padding-right: 0.5rem;
+}
+
+.outletContainerClosed {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 93%;
     padding-left: 0.5rem;
 }

@@ -3,8 +3,8 @@
 .subredditMenuContainerOpen {
     margin-top: 1rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
     padding-right: 1rem;
+    padding-bottom: 1rem;
     border: dashed 5px #000;
     box-sizing: border-box;
     width: 100%;
@@ -44,10 +44,19 @@
     margin-top: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-right: 1rem;
     border: dashed 5px #000;
     box-sizing: border-box;
     width: 100%;
+}
+
+.subredditMenuContainerClosed ul {
+    display: none;
+}
+
+.subredditMenuContainerClosed p {
+    text-align: start;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /* Toggles for menu  */
@@ -67,3 +76,5 @@
         cursor: pointer;
     }
 }
+
+/* Smaller screen size styling */

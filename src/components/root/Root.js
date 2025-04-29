@@ -16,10 +16,10 @@ export default function Root() {
         <>
             <SearchBar/>
             <div className={style.rootContainer}>
-                <div className={style.menuContainer}>
+                <div className={subredditsMenuOpen ? style.menuContainerOpen : style.menuContainerClosed}>
                     <SubredditsMenu isOpen={subredditsMenuOpen} toggleSubredditsMenu={handleMenuChange}/>
                 </div>
-                <div className={style.outletContainer}>
+                <div className={subredditsMenuOpen ? style.outletContainerOpen : style.outletContainerClosed}>
                     <Outlet/>
                 </div>
             </div>

@@ -9,8 +9,6 @@ const SubredditsMenu = (props) => {
     const dispatch = useDispatch();
     const subreddit = useSelector(state => state.subredditsMenu);
     const { subreddits, isLoadingSubredditsMenu, failedToLoadSubredditsMenu } = subreddit;
-    const closeMenuClass = props.isOpen ? "style.closeMenu" : "style.openMenu";
-    const openMenuClass = props.isOpen ? "style.openMenu" : "style.closeMenu";
 
     useEffect(() => {
         dispatch(loadSubredditsMenu());

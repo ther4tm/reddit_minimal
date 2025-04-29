@@ -1,6 +1,7 @@
 .galleryContainer {
     height: 30rem;
     position: relative;
+    max-width: 100%;
 }
 
 .galleryContainer .leftArrow {
@@ -14,20 +15,22 @@
 .galleryContainer .rightArrow {
     height: 3rem;
     position: absolute;
-    top: 50%;
     width: 3rem;
     right: 0;
+    top: 50%;
 }
 
 .galleryContainer img {
     height: 30rem;
+    width: 100%;
+    object-fit: contain;
 }
 
 .galleryContainer button {
     border-top: solid 5px #ffffff;
-border-left: solid 5px #ffffff;
-border-bottom: solid 5px #000000;
-border-right: solid 5px #000000;
+    border-left: solid 5px #ffffff;
+    border-bottom: solid 5px #000000;
+    border-right: solid 5px #000000;
 &:hover {
     cursor: pointer;
     background-color: rgba(255, 69, 0, 0.2);
