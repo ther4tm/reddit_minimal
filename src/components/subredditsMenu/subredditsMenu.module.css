@@ -1,4 +1,6 @@
-.subredditMenuContainer {
+/* Menu open styling */
+
+.subredditMenuContainerOpen {
     margin-top: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -8,13 +10,13 @@
     width: 100%;
 }
 
-.subredditMenuContainer ul {
+.subredditMenuContainerOpen ul {
     display: block;
     overflow: hidden;
     padding-left: 2.5rem;
 }
 
-.subredditMenuContainer li {
+.subredditMenuContainerOpen li {
     list-style-type: "\1F7AC";
     color: black;
     white-space: nowrap;
@@ -23,7 +25,7 @@
     }
 }
 
-.subredditMenuContainer a {
+.subredditMenuContainerOpen a {
     text-decoration: none;
     color: black;
     padding-left: 1rem;
@@ -32,9 +34,23 @@
     }
 }
 
-.subredditMenuContainer p {
+.subredditMenuContainerOpen p {
     text-align: end;
 }
+
+/* Menu closed styling */
+
+.subredditMenuContainerClosed {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    border: dashed 5px #000;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Toggles for menu  */
 
 .openMenu {
     display: none;

@@ -5,18 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loadSubredditsMenu } from "./subredditsMenuSlice";
 import { loadSubreddit } from "../subreddit/subredditSlice";
 
-export default function SubredditsMenu() {
+const SubredditsMenu = (props) => {
     const dispatch = useDispatch();
     const subreddit = useSelector(state => state.subredditsMenu);
     const { subreddits, isLoadingSubredditsMenu, failedToLoadSubredditsMenu } = subreddit;
-
-    const minimiseMenu = (event) => {
-        event.target.style.display = 'none';
-    }
-
-    const maximiseMenu = (event) => {
-        event.target.style.display = 'block';
-    }
+    const closeMenuClass = props.isOpen ? "style.closeMenu" : "style.openMenu";
+    const openMenuClass = props.isOpen ? "style.openMenu" : "style.closeMenu";
 
     useEffect(() => {
         dispatch(loadSubredditsMenu());
@@ -54,10 +48,12 @@ export default function SubredditsMenu() {
     }
 
     return (
-        <div className={style.subredditMenuContainer}>
-            <p id="closeMenu" className={style.closeMenu} onClick={() => {minimiseMenu()}} >&lt;&lt; close</p>
-            <p id="openMenu" className={style.openMenu} onClick={() => {maximiseMenu()}}>open &gt;&gt;</p>
+        <div className={props.isOpen ? style.subredditMenuContainerOpen : style.subredditMenuContainerClosed}>
+            <p className={props.isOpen ? style.closeMenu : style.openMenu} onClick={props.toggleSubredditsMenu}>&lt;&lt; close</p>
+            <p className={props.isOpen ? style.openMenu : style.closeMenu} onClick={props.toggleSubredditsMenu}>open &gt;&gt;</p>
             {displaySubredditMenu()}
         </div>
     )
-}
+};
+
+export default SubredditsMenu;
