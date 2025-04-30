@@ -35,3 +35,47 @@
     width: 93%;
     padding-left: 0.5rem;
 }
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .rootContainer {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* Menu open styling */
+
+    .menuContainerOpen {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: 0rem;
+    }
+
+    .outletContainerOpen {
+        display: none;
+    }
+
+    /* Menu closed styling */
+
+    .menuContainerClosed {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: 0rem;
+    }
+    
+    .outletContainerClosed {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 0rem;
+    }
+    
+}

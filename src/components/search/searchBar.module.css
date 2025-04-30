@@ -11,6 +11,7 @@
 .searchBarContainer form {
     align-content: center;
     width: 50%;
+    margin-left: 2rem;
 }
 
 .logoContainer {
@@ -28,10 +29,6 @@
 .searchBarContainer h1 {
     text-align: end;
     padding-right: 2rem;
-}
-
-.searchBarContainer form {
-    margin-left: 2rem;
 }
 
 .searchBarContainer input {
@@ -75,5 +72,49 @@
         border-bottom: solid 5px #ffffff;
         border-right: solid 5px #ffffff;
         background-color: rgb(255, 69, 0);
+    }
+}
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .searchBarContainer {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border: dashed 5px #000;
+        display: inline-flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+        align-items: center;
+    }
+
+    .searchBarContainer form {
+        display: inline-flex;
+        align-items: center;
+        width: 80%;
+        margin-left: 0rem;
+    }
+    
+    .logoContainer {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .logoContainer img {
+        display: block;
+        width: 4rem;
+        height: auto;
+        padding-right: 1rem;
+    }
+    
+    .searchBarContainer h1 {
+        text-align: center;
+        padding-right: 0rem;
     }
 }
