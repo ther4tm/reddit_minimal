@@ -19,7 +19,7 @@ export default function SubredditPreview({ subreddit }) {
 
     return (
         <div className={style.previewContainer}>
-            <div className={style.subredditHeader}>
+            <div className={style.subredditPreviewHeader}>
                 <Link to={`/${subreddit.display_name_prefixed}`} //to change route add in forward slash to have the link use the root as the beginning of the path otherwise it will just add this link on top of wherever you are in the stack
                 onClick={() => onClickPreviewLink(subreddit.display_name_prefixed)}
                 >

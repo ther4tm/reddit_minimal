@@ -7,3 +7,15 @@
     width: 100%;
     object-fit: contain;
 }
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .videoContainer video {
+        height: 20rem;
+    }
+}

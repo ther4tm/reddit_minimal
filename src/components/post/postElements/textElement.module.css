@@ -1,7 +1,30 @@
+.textElementContainer {
+    width: 100%;
+    overflow: scroll;
+}
+
 .textElementContainer ul {
     padding-left: 1.5rem;
 }
 
 .textElementContainer ol {
     padding-left: 1.5rem;
+}
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .textElementContainer {
+        font-size: 1.25rem;
+    }
+
+    .textElementContainer a {
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: rgb(255, 69, 0);
+    }
 }

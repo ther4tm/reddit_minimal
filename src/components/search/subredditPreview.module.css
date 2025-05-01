@@ -9,7 +9,7 @@
     box-shadow: 1rem 1rem rgb(58, 58, 58);
 }
 
-.subredditHeader {
+.subredditPreviewHeader {
     background-color: rgb(184, 184, 184);
     box-sizing: border-box;
     border-bottom: solid 5px #000;
@@ -18,7 +18,7 @@
     overflow: hidden;
 }
 
-.subredditHeader h2 {
+.subredditPreviewHeader h2 {
     background-color: rgb(184, 184, 184);
 }
 
@@ -75,4 +75,31 @@
         border-right: solid 5px #ffffff;
         background-color: rgb(255, 69, 0);
     }
+}
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .subredditPreviewHeader {
+        padding: 0.4rem;
+    }
+
+    .subredditPreviewHeader h2 {
+        font-size: 1.5rem;
+    }
+
+    .subredditPreviewMain p {
+        font-size: 1.25rem;
+    }
+
+    .subredditPreviewMain a {
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: rgb(255, 69, 0);
+    }
+
 }

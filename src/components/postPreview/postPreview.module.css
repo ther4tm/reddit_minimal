@@ -90,3 +90,26 @@
         background-color: rgb(255, 69, 0);
     }
 }
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .postPreviewHeader, .postPreviewMenuBar {
+        padding: 0.4rem;
+    }
+
+    .postPreviewHeader h2 {
+        font-size: 1.5rem;
+    }
+
+    .postPreviewMenuBar p {
+        font-size: 1rem;
+        padding-right: 1rem;
+        background-color: #fff;
+    }
+
+}

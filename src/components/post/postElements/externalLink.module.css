@@ -3,8 +3,32 @@
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    overflow: scroll;
 }
 
 .externalLinkContainer img {
     width: 100%;
+}
+
+.externalLinkContainer a {
+    text-decoration: none;
+    color: rgb(255, 69, 0);
+}
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .externalLinkContainer p {
+        font-size: 1.25rem;
+    }
+
+    .externalLinkContainer a {
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: rgb(255, 69, 0);
+    }
 }

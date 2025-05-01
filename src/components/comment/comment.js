@@ -41,7 +41,7 @@ export default function Comment({comment}) {
         <div className={style.commentContainer}>
             <div>
                 <div className={style.commentHeader}>
-                    <h3>Author: {comment.author}</h3>
+                    <h3>{comment.author}</h3>
                 </div>
                 <div className={style.commentMain}>
                     {setCommentBody(comment)}

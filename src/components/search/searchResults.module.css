@@ -12,3 +12,15 @@
 .searchResultsContainer h1 {
     padding-bottom: 1rem;
 }
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .searchResultsContainer h1 {
+        font-size: 2rem;
+    }
+}

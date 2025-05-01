@@ -56,6 +56,10 @@
     width: 100%;
 }
 
+.postMain h3 {
+    padding-bottom: 1rem;
+}
+
 .postCommentsContainer {
     padding-left: 2.5%;
     padding-bottom: 2.5%;
@@ -73,4 +77,31 @@
     padding-left: 0.5%;
     padding-right: 0.5%;
     padding-bottom: 0.5%;
+}
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .postHeader, .postMenuBar {
+        padding: 0.4rem;
+    }
+
+    .postHeader h2 {
+        font-size: 1.5rem;
+    }
+
+    .postMenuBar p {
+        font-size: 1rem;
+        padding-right: 1rem;
+        background-color: #fff;
+    }
+
+    .postMain h3 {
+        font-size: 1.25rem;
+    }
+
 }

@@ -54,3 +54,24 @@
         animation: pulse 2s infinite;
     }
 }
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .commentHeader h3,.commentMain p, .commentMain ul, .commentMain ol, .commentMain a {
+        font-size: 1.25rem;
+    }
+
+    .commentMain {
+        padding: 0.4rem;
+    }
+
+    .commentMain a {
+        text-decoration: none;
+        color: rgb(255, 69, 0);
+    }
+}

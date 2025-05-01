@@ -6,6 +6,7 @@ import { selectPost, isLoadingPostAndComments, failedToLoadPostAndComments, sele
 import { Text } from "./postElements/textElement";
 import { Image } from "./postElements/imageElement";
 import { Video } from "./postElements/videoElement";
+import { ExternalLink } from "./postElements/externalLinkElement"; 
 import { GalleryFeed } from "./postElements/galleryFeed";
 import { calculatePostDate } from "../../Utilities/utilities";
 
@@ -39,6 +40,7 @@ export default function Post() {
                     </div>
                     <div className={style.postMain}>
                         <h3>Posted by {post.author} {calculatePostDate(date)}</h3>
+                        <ExternalLink post={post}/>
                         <GalleryFeed post={post}/>
                         <Video post={post}/>
                         <Image post={post}/>

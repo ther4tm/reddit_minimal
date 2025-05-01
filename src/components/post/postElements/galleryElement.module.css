@@ -43,3 +43,29 @@
         background-color: rgb(255, 69, 0);
     }
 }
+
+/* Smaller screen size styling */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+    .galleryContainer {
+        height: 20rem;
+    }
+
+    .galleryContainer .leftArrow {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .galleryContainer .rightArrow {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .galleryContainer img {
+        height: 20rem;
+    }
+}

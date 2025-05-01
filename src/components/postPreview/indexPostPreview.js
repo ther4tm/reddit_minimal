@@ -18,7 +18,7 @@ export default function IndexPostPreview({ post }) {
     }
 
     const goToPost = (e) => {
-        navigate(`${e.id}`)
+        navigate(`${e.subreddit_name_prefixed}/${e.id}`)
         dispatch(loadPostAndComments(e.permalink))
     }
 

@@ -6,7 +6,7 @@ import style from './root.module.css';
 
 
 export default function Root() {
-    const [subredditsMenuOpen, setSubredditsMenuOpen] = useState(true);
+    const [subredditsMenuOpen, setSubredditsMenuOpen] = useState(false);
 
     const handleMenuChange = () => {
         setSubredditsMenuOpen(!subredditsMenuOpen);
