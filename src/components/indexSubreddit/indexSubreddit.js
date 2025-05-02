@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import style from './indexSubreddit.module.css';
 import { useDispatch, useSelector } from "react-redux";
-import { selectIndexSubredditPosts, isLoadingIndexSubredditPosts, failedToLoadIndexSubredditPosts, loadDefaultSubreddit, getIndexSubreddit } from "./indexSubredditSlice";
+import { selectIndexSubredditPosts, isLoadingIndexSubredditPosts, failedToLoadIndexSubredditPosts, loadDefaultSubreddit } from "./indexSubredditSlice";
 import IndexPostPreview from "../postPreview/indexPostPreview";
 
 export default function IndexSubreddit() {
@@ -9,11 +9,10 @@ export default function IndexSubreddit() {
     const indexSubredditPosts = useSelector(selectIndexSubredditPosts);
     const isLoading = useSelector(isLoadingIndexSubredditPosts);
     const hasError = useSelector(failedToLoadIndexSubredditPosts);
-    /*const selectedSubreddit = useSelector(getIndexSubreddit);*/
 
     useEffect(() => {
         dispatch(loadDefaultSubreddit());
-    }, []);
+    }, [dispatch]);
  
     const displayDefaultSubredditPostPreviews = () => {
         if (isLoading) {

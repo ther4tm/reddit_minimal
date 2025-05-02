@@ -28,6 +28,8 @@
 
 .commentMain {
     padding: 1%;
+    white-space: nowrap;
+    overflow: scroll;
 }
 
 .commentMain ul {
@@ -68,6 +70,7 @@
 
     .commentMain {
         padding: 0.4rem;
+        text-wrap: wrap;
     }
 
     .commentMain a {

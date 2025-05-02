@@ -12,7 +12,7 @@ const SubredditsMenu = (props) => {
 
     useEffect(() => {
         dispatch(loadSubredditsMenu());
-    }, []);
+    }, [dispatch]);
 
     const onClickMenuLink = (e) => {
         dispatch(loadSubreddit(e))

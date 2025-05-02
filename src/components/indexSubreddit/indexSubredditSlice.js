@@ -42,6 +42,5 @@ const indexSubredditSlice = createSlice({
 export const selectIndexSubredditPosts = (state) => state.indexSubreddit.indexSubredditPosts;
 export const isLoadingIndexSubredditPosts = (state) => state.indexSubreddit.isLoadingIndexSubredditPosts;
 export const failedToLoadIndexSubredditPosts = (state) => state.indexSubreddit.failedToLoadIndexSubredditPosts;
-export const getIndexSubreddit = (state) => state.indexSubreddit.indexSubreddit;
 
 export default indexSubredditSlice.reducer;
