@@ -9,7 +9,7 @@ export function ExternalLink({post}) {
 
     function checkIsImg(e) {
         if(typeof e !== 'string') return false;
-        return (e.match(/^http[^\?]*.(jpg|jpeg|svg|webp|gif|png|tiff|bmp)(\?(.*))?$/gmi) != null); //regex to check if url is an image and supports query params after file extensions
+        return (e.match(/^http[^]*.(jpg|jpeg|svg|webp|gif|png|tiff|bmp)(\?(.*))?$/gmi) != null); //regex to check if url is an image and supports query params after file extensions
     }
 
     if (!post.media && checkIsImg(imgThumb)) {
