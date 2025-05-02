@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SubredditsMenu from "../subredditsMenu/subredditsMenu";
 import { Outlet } from "react-router-dom";
 import SearchBar from '../search/searchBar';
@@ -11,6 +11,20 @@ export default function Root() {
     const handleMenuChange = () => {
         setSubredditsMenuOpen(!subredditsMenuOpen);
     };
+
+    useEffect(() => {
+        function handleResize() {
+          if (window.innerWidth > 497) {
+            setSubredditsMenuOpen(true);
+          }
+        }
+    
+        handleResize();
+    
+        window.addEventListener("resize", handleResize);
+    
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
 
     return (
         <>

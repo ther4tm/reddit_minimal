@@ -102,4 +102,8 @@
         color: rgb(255, 69, 0);
     }
 
+    .subredditPreviewFooter button {
+        font-size: 1.25rem;
+    }
+
 }
