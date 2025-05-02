@@ -16,7 +16,9 @@ const SubredditsMenu = (props) => {
 
     const onClickMenuLink = (e) => {
         dispatch(loadSubreddit(e))
-        props.toggleSubredditsMenu();
+        if (window.innerWidth < 498) {
+            props.toggleSubredditsMenu();
+        };
     }
     
     const displaySubredditMenu = () => {
