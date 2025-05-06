@@ -34,9 +34,9 @@ export default function Post() {
                         <h2>{post.title}</h2>
                     </div>
                     <div className={style.postMenuBar}>
-                        <p>&#129153; {post.ups}</p>
-                        <p>&#129155; {post.downs}</p>
-                        <p>&#128490; {post.num_comments}</p>
+                        <i class="fa-solid fa-arrow-up"></i><p>{post.ups}</p>
+                        <i class="fa-solid fa-arrow-down"></i><p>{post.downs}</p>
+                        <i class="fa-solid fa-comments"></i><p>{post.num_comments}</p>
                     </div>
                     <div className={style.postMain}>
                         <h3>Posted by {post.author} {calculatePostDate(date)}</h3>
