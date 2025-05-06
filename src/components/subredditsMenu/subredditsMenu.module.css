@@ -13,11 +13,10 @@
 .subredditMenuContainerOpen ul {
     display: block;
     overflow: hidden;
-    padding-left: 2.5rem;
 }
 
 .subredditMenuContainerOpen li {
-    list-style-type: "\1F7AC";
+    list-style-type: none;
     color: black;
     white-space: nowrap;
     &:hover {

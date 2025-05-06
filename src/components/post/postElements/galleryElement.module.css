@@ -31,6 +31,7 @@
     border-left: solid 5px #ffffff;
     border-bottom: solid 5px #000000;
     border-right: solid 5px #000000;
+    font-weight: 900;
     &:hover {
         cursor: pointer;
         background-color: rgba(255, 69, 0, 0.2);
@@ -67,5 +68,9 @@
 
     .galleryContainer img {
         height: 20rem;
+    }
+
+    .galleryContainer button {
+        color: #000;
     }
 }

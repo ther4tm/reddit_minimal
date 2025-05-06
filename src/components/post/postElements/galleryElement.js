@@ -23,8 +23,8 @@ export function ImageGallery({keys, images}) {
 
     return (
         <div className={style.galleryContainer}>
-            <button className={style.leftArrow} onClick={() => previousImg()}>&#11207;</button>
-            <button className={style.rightArrow} onClick={() => nextImg()}>&#11208;</button>
+            <button className={style.leftArrow} onClick={() => previousImg()}>&lt;</button>
+            <button className={style.rightArrow} onClick={() => nextImg()}>&gt;</button>
             <img src={imageURLs[currentImage]} alt={imageURLs} />
         </div>
     )

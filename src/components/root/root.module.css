@@ -9,14 +9,14 @@
 .menuContainerOpen {
     display: inline-block;
     box-sizing: border-box;
-    width: 17%;
+    width: 15%;
     padding-right: 0.5rem;
 }
 
 .outletContainerOpen {
     display: inline-block;
     box-sizing: border-box;
-    width: 83%;
+    width: 85%;
     padding-left: 0.5rem;
 }
 
