@@ -4,7 +4,7 @@ import { loadSearchResults } from "./searchSlice";
 import { useDispatch } from "react-redux";
 import style from './searchBar.module.css';
 
-export default function SearchBar() {
+export default function SearchBar({toggleSubredditsMenu}) {
         const [search, setSearch] = useState(''); // User Search
         const dispatch = useDispatch();
         const navigate = useNavigate();
@@ -21,6 +21,7 @@ export default function SearchBar() {
             navigate('search_results');
             dispatch(loadSearchResults(search));
             setSearch('');
+            toggleSubredditsMenu();
         }
 
     return (

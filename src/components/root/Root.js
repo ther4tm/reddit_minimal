@@ -28,7 +28,7 @@ export default function Root() {
 
     return (
         <>
-            <SearchBar/>
+            <SearchBar toggleSubredditsMenu={handleMenuChange}/>
             <div className={style.rootContainer}>
                 <div className={subredditsMenuOpen ? style.menuContainerOpen : style.menuContainerClosed}>
                     <SubredditsMenu isOpen={subredditsMenuOpen} toggleSubredditsMenu={handleMenuChange}/>
