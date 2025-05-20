@@ -47,6 +47,10 @@
     background-color: #fff;
 }
 
+.postMenuBar i {
+    background-color: #fff;
+}
+
 .postMain {
     display: flex;
     box-sizing: border-box;
